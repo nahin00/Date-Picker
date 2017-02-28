@@ -24,11 +24,17 @@ class ViewController: UIViewController {
     
     func createDatePicker(){
         
+        // Creating a ToolBar
+        
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
+        // Adding a bar button to ToolBar
+        
         let okBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(ViewController.okBtnTapped))
         toolBar.setItems([okBarButton], animated: true)
+        
+        // Text Field input type
         
         textField.inputAccessoryView = toolBar
         textField.inputView = datePicker
@@ -36,6 +42,8 @@ class ViewController: UIViewController {
     }
     
     func okBtnTapped(){
+        
+        // Date Formatter formats date and time
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
